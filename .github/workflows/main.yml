@@ -1,0 +1,25 @@
+workflow_dispatch
+
+  env:
+    name: mohith
+  jobs:
+    first-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: first step
+         run: echo "hi, hello i am $name"
+     second =-job:
+       runs-on: ubuntu-latest
+
+
+       runs-on: ubuntu-latest
+       steps:
+        - name: first step
+          run: echo 'hi, hello i am $name"
+        second-job:
+         runs-on: ubuntu-latest
+         env:
+          job: jobless
+        steps: 
+          -name: first steo]p
+          run: echo "hi, i am $name and i am $job"
