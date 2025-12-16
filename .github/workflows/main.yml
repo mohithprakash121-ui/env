@@ -4,29 +4,22 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
-workflow_dispatch
+env:
+  name: mohith
 
-  env:
-    name: mohith
-  jobs:
-    first-job:
-      runs-on: ubuntu-latest
-      steps:
-        - name: first step
-         run: echo "hi, hello i am $name"
-     second =-job:
-       runs-on: ubuntu-latest
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+        run: echo "hi, hello I am $name"
 
-
-       runs-on: ubuntu-latest
-       steps:
-        - name: first step
-          run: echo 'hi, hello i am $name"
-        second-job:
-         runs-on: ubuntu-latest
-         env:
-          job: jobless
-        steps: 
-          -name: first steo]p
-          run: echo "hi, i am $name and i am $job"
+  second-job:
+    runs-on: ubuntu-latest
+    env:
+      job: jobless
+    steps:
+      - name: Second step
+        run: echo "hi, I am $name and I am $job"
